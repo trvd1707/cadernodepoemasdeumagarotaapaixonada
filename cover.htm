@@ -1,0 +1,832 @@
+<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
+<html>
+<head>
+   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+   <meta http-equiv="content-type" content="text/html;charset=iso-8859-1">
+   <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; U) [Netscape]">
+   <title>ZineBuilder Template</title>
+<style TYPE="text/css">
+.essayAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.essayBlockQuoteCenteredPoetry
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: center
+}
+.essayBlockQuoteCitation
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.essayBlockQuotePoetry
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.essayBlockQuoteProse
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.essayCaption
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.essayChapterTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.essayDedication
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.essayDedicationCitation
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.essaySubtitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.essayText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.essayTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.letterGreeting
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.letterHeadingDate
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: right
+}
+.letterSignature
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: right
+}
+.letterText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.letterTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pictureCaption
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.poemAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.poemCaption
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.poemDedication
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.poemDedicationCitation
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.poemStanzaTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.poemSubtitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.poemText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.poemTextCentered
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: center
+}
+.poemTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.sectionContributorsList
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.sectionContributorsListTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.sectionForewordCitation
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: right
+}
+.sectionForewordText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.sectionForewordTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.sectionSubtitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    TEXT-ALIGN: left
+}
+.sectionTitle
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 18pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.storyAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.storyBlockQuoteCitation
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.storyBlockQuotePoetry
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.storyBlockQuoteProse
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.storyCaption
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.storyChapterTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.storyDedication
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.storyDedicationCitation
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.storyJournalEntryHeading
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.storySubtitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.storytext
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.storyTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.zineIntroAckAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: right
+}
+.zineIntroAckSectionTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.zineIntroAckText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineIntroContributorsSectionTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.zineIntroDedicationAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: right
+}
+.zineIntroDedicationText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    FONT-STYLE: italic;
+    TEXT-ALIGN: left
+}
+.zineIntroIntroAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: right
+}
+.zineIntroIntroSectionTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.zineIntroListofContributorsText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineIntroListofTeachersAdmins
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.zineIntroPrefaceAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: right
+}
+.zineIntroPrefaceSectionTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.zineIntroPrefaceText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineIntroPublisherColophon
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.zineIntroSchoolDateTerm
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.zineIntroSchoolNameAndAddress
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.zineIntroText
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineIntroZineAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.zineIntroZineEditorName
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.zineIntroZinePublisherInfo
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 9pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.zineIntroZineSubtitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.zineIntroZineTitle
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 18pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.zineTOCIntroMatter
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineTOCPieceTitleAuthor
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineTOCSectionBreak
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineTOCZinesubtitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.zineTOCZineTitle
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 18pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.zineWelcomeMessage
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.zineWelcomePageZineEditorName
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: right
+}
+.zineWelcomePageZineSubtitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+.zineWelcomePageZineTitle
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 18pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.pieceZineCopyrightStatement
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 8pt;
+    TEXT-ALIGN: right
+}
+.poemProse
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    TEXT-ALIGN: left
+}
+.zineIntroDedicationTitle
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.storyBlockQuoteCenteredPoetry
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 10pt;
+    MARGIN-LEFT: 48px;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: center
+}
+.subsectionTitle
+{
+    COLOR: #333399;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 18pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left;
+    TEXT-TRANSFORM: uppercase
+}
+.letterAuthor
+{
+    COLOR: #6666cc;
+    FONT-FAMILY: Verdana, Arial, Helvetica, sans-serif;
+    FONT-SIZE: 12pt;
+    MARGIN-RIGHT: 48px;
+    TEXT-ALIGN: left
+}
+</style>
+</head>
+<body bgcolor="#FFFFFF">
+&nbsp;
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="580" HEIGHT="430" BGCOLOR="#000000" >
+<tr BGCOLOR="#6666CC" height="30">
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="100" HEIGHT="30" BGCOLOR="#000000"><a href="http://www.chapbooks.com"><img SRC="logo.gif" BORDER=0 height=30 width=100></a></td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="480" HEIGHT="30" BGCOLOR="#6666CC">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="472" HEIGHT="22" >
+<tr>
+<td ALIGN=RIGHT VALIGN=CENTER><b><font face="Verdana"><font color="#99CCFF"><font size=-1>CADERNO
+DE POEMAS DE UM GAROTA APAIXONADA - Teresa Rios - 2001</font></font></font></b></td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr BGCOLOR="#6666CC" height="21">
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="100" HEIGHT="21" BGCOLOR="#6666CC">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="92" HEIGHT="12" >
+<tr>
+<td WIDTH="92"></td>
+</tr>
+</table>
+</td>
+
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="480" HEIGHT="21" BGCOLOR="#333399">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="472" HEIGHT="12" >
+<tr>
+<td>
+<div align=right><!--	<A HREF="#"><font color=white>Back</font></A>
+              <A HREF="pubtoc.asp?zine_id=1182"><font color=white>Table of Contents</font></A>
+		 <A HREF="#"><font color=white>Introduction Page</font></A>  --><font face="Verdana"><font color="#FFFFFF"><font size=-1><a href="pubtoc.asp?zine_id=1182">Next</a></font></font></font></div>
+</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr BGCOLOR="#6666CC" height="360">
+<td ALIGN=CENTER VALIGN=TOP WIDTH="100" HEIGHT="360" BGCOLOR="#6666CC"><!-- <A HREF="#"><img height="20" border=0 width="96" src="zinebhome.gif"></A> --><a href="http://workspace.chapbooks.com/wshome.asp"><img SRC="allzinespage.gif" ALT="Work Space Home" BORDER=0 height=20 width=96></a><a href="searchresults.asp?"><img SRC="allbooks.gif" ALT="All Books" BORDER=0 height=20 width=96></a><a href="searchzines.asp"><img SRC="searchzines.gif" ALT="Search Books" BORDER=0 height=20 width=96></a><a href="mailto:trios@home.com"><img SRC="emaileditor.gif" ALT="Email Editor" BORDER=0 height=20 width=96></a></td>
+
+<td VALIGN=TOP WIDTH="480" HEIGHT="360" BGCOLOR="#FFFFFF">
+<table CELLSPACING=0 CELLPADDING=5 WIDTH="300" >
+<tr>
+<td COLSPAN="2"><font face="">Caderno de Poemas de um Garota Apaixonada</font>
+<p><font face="">Edited by Teresa Rios</font>
+<p><font face="">Poemas adolescentes de uma garota desabrochando para a
+vida e para o amor.</font>
+<p><img SRC="U4743-4544-W.jpeg" BORDER=0 height=40 width=40>
+<br>&nbsp;
+<br>&nbsp;
+<p><font face=""><a href="pubtoc.asp?zine_id=1182">Click Here to Enter</a></font>
+<br>&nbsp;
+<br>&nbsp;</td>
+</tr>
+</table>
+</td>
+</tr>
+
+<tr ALIGN=CENTER VALIGN=CENTER height="20">
+<td ALIGN=CENTER VALIGN=CENTER WIDTH="100" HEIGHT="20" BGCOLOR="#6666CC">
+<table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="92" HEIGHT="12" >
+<tr height="12">
+<td ALIGN=LEFT VALIGN=BOTTOM WIDTH="88" HEIGHT="12"><u><font face="Verdana"><font color="#99CCFF"><font size=-2><a href="#Anchor-49575">Top</a></font></font></font></u></td>
+</tr>
+</table>
+</td>
+
+<td VALIGN=CENTER WIDTH="480" HEIGHT="20" BGCOLOR="#333399">
+<center><table BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="472" HEIGHT="12" >
+<tr>
+<td>
+<div align=right><!-- <a href="#"><font color=white>Back</font></a>
+                <a href="pubtoc.asp?zine_id=1182"><font color=white>Table of Contents</font></a>
+                <a href="#"><font color=white>Introduction Page</font></a>
+               --><font face="Verdana"><font color="#FFFFFF"><font size=-1><a href="pubtoc.asp?zine_id=1182">Next</a></font></font></font></div>
+</td>
+</tr>
+</table></center>
+</td>
+</tr>
+
+<tr ALIGN=CENTER VALIGN=CENTER BGCOLOR="#99CCFF" height="20">
+<td ALIGN=RIGHT VALIGN=CENTER COLSPAN="2" WIDTH="580" HEIGHT="20"><!-- FOOTER --><!--<p><img src="images/bs_footer_rule.gif" width="640" height="3"></p> -->
+<p><font face="Arial, Helvetica, sans-serif"><font size=-2>&copy; 1998,
+1999, 2000 <a href="http://www.chapbooks.com">Chapbooks.com, Inc.</a> All
+Rights Reserved.&nbsp;</font></font>
+<br><!--
+<p><font size="1" face="Arial, Helvetica, sans-serif">
+&copy; 1998, 1999, Chapbooks.com, Inc.. All Rights Reserved. Email <a href="mailto: info@chapbooks.com">Chapbooks.com, Inc.</A>
+</font></p> --></td>
+</tr>
+</table>
+
+</body>
+</html>
