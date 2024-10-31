@@ -723,3 +723,7 @@
     MARGIN-RIGHT: 48px;
     TEXT-ALIGN: left
 }
+
+a {
+    text-decoration: none; /* Removes the underline */
+}
