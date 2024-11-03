@@ -13,6 +13,7 @@ node_modules/
 
 # Ignore VS Code-specific settings
 .vscode/
+._*
 
 # Ignore cache and temporary files
 *.tmp
