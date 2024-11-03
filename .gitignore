@@ -1,0 +1,36 @@
+# Ignore node_modules, if using npm packages
+node_modules/
+
+# Ignore .DS_Store files on macOS
+.DS_Store
+
+# Ignore any log files
+*.log
+
+# Ignore environment variable files
+.env
+.env.*
+
+# Ignore VS Code-specific settings
+.vscode/
+
+# Ignore cache and temporary files
+*.tmp
+*.swp
+*.bak
+*.old
+.sass-cache/
+.cache/
+
+# Ignore build outputs if using a build system
+dist/
+build/
+out/
+
+# Ignore compiled or processed assets (e.g., if using Sass, TypeScript, etc.)
+*.css.map
+*.js.map
+
+# Ignore files for deployment
+*.zip
+*.tar
