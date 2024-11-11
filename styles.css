@@ -727,3 +727,24 @@
 a {
     text-decoration: none; /* Removes the underline */
 }
+
+.tab {
+    display: inline-block;
+    padding: 10px;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    margin-right: 5px;
+    border: 1px solid #ccc;
+}
+.tab.active {
+    background-color: #ddd;
+}
+.content {
+    display: none;
+    padding: 20px;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+}
+.content.active {
+    display: block;
+}

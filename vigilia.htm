@@ -9,30 +9,9 @@
 		p { line-height: 115%; margin-bottom: 0.1in; background: transparent }
 		p.ctl { font-weight: bold }
 	</style>
-    <style>
-        .tab {
-            display: inline-block;
-            padding: 10px;
-            cursor: pointer;
-            background-color: #f1f1f1;
-            margin-right: 5px;
-            border: 1px solid #ccc;
-        }
-        .tab.active {
-            background-color: #ddd;
-        }
-        .content {
-            display: none;
-            padding: 20px;
-            border: 1px solid #ccc;
-            margin-top: 10px;
-        }
-        .content.active {
-            display: block;
-        }
-    </style>
 </HEAD>
 <BODY bgColor=whitelang="pt-BR" link="#000080" vlink="#800000" dir="ltr"><FONT color=black>
+  <script src="scripts.js"></script>
 <TABLE bgColor=black border=0 cellPadding=0 cellSpacing=0 height=430 
   width=580><TBODY>
   <TR bgColor=#6666cc height=30>
@@ -144,27 +123,4 @@
       <P><FONT face="Arial, Helvetica, sans-serif" size=1>&copy; 1998, 1999, 2000 <A 
       href="mailto:trvd1707@gmail.com">Teresa Rios Van Dusen</A> All Rights 
       Reserved. </FONT></P></TD></TR></TBODY></TABLE></FONT>
-      <script>
-        function showContent(language) {
-          if (language === 'portuguese') {
-            document.title = "Caderno de Poemas de uma Garota Apaixonada"; // Change to the Portuguese title
-          } else if (language === 'english') {
-            document.title = "Poetry Notebook of a Girl in Love"; // Change to the English title
-          }
-          document.querySelectorAll('.content').forEach(function(content) {
-              content.classList.remove('active');
-            });
-          document.querySelectorAll('.tab').forEach(function(tab) {
-                tab.classList.remove('active');
-            });
-          document.getElementById(language).classList.add('active');
-            event.target.classList.add('active');
-        }
-		
-		// Show Portuguese content on load
-			window.onload = function() {
-            showContent('portuguese');
-            document.querySelector('.tab').classList.add('active');
-        };
-    </script>
     </BODY></HTML>
