@@ -748,3 +748,16 @@ a {
 .content.active {
     display: block;
 }
+@page {
+    size: 8.5in 11in;
+    margin: 0.79in
+  }
+
+  p {
+    line-height: 115%;
+    margin-bottom: 0.1in;
+    background: transparent
+  }
+  p.ctl {
+    font-weight: bold
+  }
