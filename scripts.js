@@ -20,6 +20,22 @@ function showContent(language, event = null) {
             event.target.classList.add('active');
         }
 }
+
+  function loadNavigation(leftLink, rightLink) {
+    fetch('navigationbar.html')
+      .then(response => response.text())
+      .then(html => {
+        document.body.insertAdjacentHTML('afterbegin', html); // Insert at the top of the body
+        document.getElementById('leftArrow').href = leftLink;
+        document.getElementById('rightArrow').href = rightLink;
+      });
+  }
+
+  // Call this function with the desired URLs
+  window.onload = function() {
+    loadNavigation('toc.html', 'camaleoa.htm');
+  };
+
 // Show Portuguese content on load
 window.onload = function () {
     showContent('portuguese', null);

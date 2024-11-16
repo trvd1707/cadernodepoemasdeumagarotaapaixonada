@@ -11,6 +11,11 @@
 
 <BODY bgColor=white>
   <script src="scripts.js"></script>
+  <script>
+    window.addEventListener('load', function () {
+      console.log('Function from individual page');
+      loadNavigation('toc.html', 'camaleoa.htm');
+    });</script>
   <FONT color=black>
     <TABLE bgColor=black border=0 cellPadding=0 cellSpacing=0 height=430 width=580>
       <TBODY>
@@ -48,17 +53,17 @@
                 <TBODY>
                   <TR>
                     <TD>
-                      <DIV align=right>
-                        <FONT color=white face=Verdana size=2><A href="toc.html">
-                            <FONT color=white> &larr; </FONT>
-                          </A> <A href="toc.html">
-                            <FONT color=white>Table of Contents</FONT>
-                          </A> <A href="Front.htm">
-                            <FONT color=white> Intro </FONT>
-                          </A> <A href="camaleoa.htm">
-                            <FONT color=white> &rarr; </FONT>
-                          </A></FONT>
-                      </DIV>
+                      <div style="display: flex; justify-content: space-between; align-items: center;">
+                        <a href="toc.html" style="font-family: Verdana; color: white; font-size: 28px;">&larr;</a>
+                        <div style="text-align: center; flex-grow: 1;">
+                          <a href="toc.html"
+                            style="font-family: Verdana; color: white; font-size: 14px; margin: 0 10px;">Table of
+                            Contents</a>
+                          <a href="Front.htm"
+                            style="font-family: Verdana; color: white; font-size: 14px; margin: 0 10px;">Intro</a>
+                        </div>
+                        <a href="camaleoa.htm" style="font-family: Verdana; color: white; font-size: 28px;">&rarr;</a>
+                      </div>
                     </TD>
                   </TR>
                 </TBODY>
@@ -155,17 +160,17 @@
                   <TBODY>
                     <TR>
                       <TD>
-                        <DIV align=right>
-                          <FONT color=white face=Verdana size=2><A href="toc.html">
-                              <FONT color=white> &larr; </FONT>
-                            </A> <A href="toc.html">
-                              <FONT color=white>Table of Contents</FONT>
-                            </A> <A href="Front.htm">
-                              <FONT color=white> Intro </FONT>
-                            </A> <A href="camaleoa.htm">
-                              <FONT color=white> &rarr; </FONT>
-                            </A></FONT>
-                        </DIV>
+                        <div style="display: flex; justify-content: space-between; align-items: center;">
+                          <a href="toc.html" style="font-family: Verdana; color: white; font-size: 14px;">&larr;</a>
+                          <div style="text-align: center; flex-grow: 1;">
+                            <a href="toc.html"
+                              style="font-family: Verdana; color: white; font-size: 14px; margin: 0 10px;">Table of
+                              Contents</a>
+                            <a href="Front.htm"
+                              style="font-family: Verdana; color: white; font-size: 14px; margin: 0 10px;">Intro</a>
+                          </div>
+                          <a href="camaleoa.htm" style="font-family: Verdana; color: white; font-size: 14px;">&rarr;</a>
+                        </div>
                       </TD>
                     </TR>
                   </TBODY>
