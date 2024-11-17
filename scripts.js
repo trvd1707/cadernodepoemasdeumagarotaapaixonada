@@ -35,9 +35,45 @@ function showContent(language, event = null) {
   window.onload = function() {
     loadNavigation('toc.html', 'camaleoa.htm');
   };
+ // Function to get the value of a query parameter from the URL
+ function getQueryParameter(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    console.log("URLParams:" + urlParams)
+    console.log(urlParams.get('poem'))
+
+    return urlParams.get(param);
+  }
+
+  // Load content based on the provided parameter
+  function loadContent(param) {
+    if (!param) return;
+
+    const ptContentFile = param + '_pt.txt';
+    const engContentFile = param + '_en.txt';
+
+    // Load the content for Portuguese
+    fetch(ptContentFile)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('pt-content').innerText = data;
+      })
+      .catch(err => {
+        document.getElementById('pt-content').innerText = 'Error loading content.';
+      });
+
+    // Load the content for English
+    fetch(engContentFile)
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('eng-content').innerText = data;
+      })
+      .catch(err => {
+        document.getElementById('eng-content').innerText = 'Error loading content.';
+      });
+  }
 
 // Show Portuguese content on load
 window.onload = function () {
-    showContent('portuguese', null);
-    document.querySelector('.tab').classList.add('active');
+    // showContent('portuguese', null);
+    // document.querySelector('.tab').classList.add('active');
 };

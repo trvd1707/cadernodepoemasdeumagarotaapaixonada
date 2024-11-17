@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dynamic Tab Content</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container mt-5">
+  <ul class="nav nav-tabs" id="myTabs">
+    <li class="nav-item">
+      <a class="nav-link active" id="pt-tab" data-toggle="tab" href="#pt">Portuguese</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" id="eng-tab" data-toggle="tab" href="#eng">English</a>
+    </li>
+  </ul>
+
+  <div class="tab-content mt-3">
+    <div class="tab-pane fade show active" id="pt">
+      <p id="pt-content">Loading...</p>
+    </div>
+    <div class="tab-pane fade" id="eng">
+      <p id="eng-content">Loading...</p>
+    </div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+<script>
+  // Get the parameter from the URL (e.g., "star") and load the content
+  const param = getQueryParameter('poem');
+  loadContent(param);
+</script>
+
+</body>
+</html>
