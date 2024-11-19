@@ -1,0 +1,20 @@
+                      <FONT class=poemTitle face="Verdana, Arial, Helvetica, sans-serif">
+                        CHAMELEON<br><br>
+                      </FONT>
+                      <FONT class=poemText face="Verdana, Arial, Helvetica, sans-serif">
+                        And one would say of her:<br>
+                        <br>
+                        - She is like a chameleon,<br>
+                        Sometimes saying yes and sometimes saying no.<br>
+                        <br>
+                        However, I am just a child,<br>
+                        Sometimes smiling and sometimes resting.<br>
+                        <br>
+                        You may think I am mysterious,<br>
+                        Because sometimes I am simple and sometimes pompous.<br>
+                        <br>
+                        To you I say that I am just some random coincidence.<br>
+                        <br>
+                        I am not your mystery, I am your woman.<br>
+                        </p>
+                      </FONT>

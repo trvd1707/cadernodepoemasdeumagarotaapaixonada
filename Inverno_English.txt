@@ -1,0 +1,23 @@
+                      <FONT class=poemTitle face="Verdana, Arial, Helvetica, sans-serif">
+                        <h3>WINTER</h3><br><br>
+                      </FONT>
+                      <FONT class=poemText face="Verdana, Arial, Helvetica, sans-serif">
+                        I love you<br>
+                        And my love for you<br>
+                        Is like the winter<br>
+                        That confines me to warm clothes<br>
+                        And blankets<br>
+                        And surrounds and invades me<br>
+                        As soon as an opportunity arises.<br>
+                        <br>
+                        The cold that accompanies you here,<br>
+                        So far from me,<br>
+                        Stays here too,<br>
+                        Like a silent sentinel.<br>
+
+                        It's a nostalgic way<br>
+                        Of having you by my side<br>
+                        While you're so far away.<br>
+                        <br>
+                        I love you.<br></p>
+                      </FONT>

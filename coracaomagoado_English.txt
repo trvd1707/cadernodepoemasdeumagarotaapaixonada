@@ -1,0 +1,20 @@
+                      <FONT class=poemTitle face="Verdana, Arial, Helvetica, sans-serif">
+                        BROKEN HEART<br>
+                        <br>
+                      </FONT>
+                      <FONT class=poemText face="Verdana, Arial, Helvetica, sans-serif">
+                        It is very difficult to understand<br>
+                        A woman's broken heart.<br>
+                        It is very difficult to understand passion.<br>
+                        It confuses the senses,<br>
+                        It drives away sense and reason.<br>
+                        It is at the same time superficial and intense.<br>
+                        <br>
+                        Passion is like mothballs<br>
+                        In dull spirits.<br>
+                        It impregnates with odors<br>
+                        Our motives and destinies,<br>
+                        While it evaporates<br>
+                        Madly and quickly.<br>
+                        </p>
+                      </FONT>

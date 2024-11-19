@@ -20,8 +20,8 @@
         <div class="container-fluid">
             <button id="prevButton" class="btn btn-outline-primary">Previous</button>
             <div class="middle-nav-links">
-                <a href="#" class="nav-link" id="indexLink">Index</a>
-                <a href="#" class="nav-link" id="introLink">Intro</a>
+                <a href="#" class="nav-link" id="indexLink">Índice</a>
+                <a href="#" class="nav-link" id="introLink">Prefácio</a>
             </div>
             <button id="nextButton" class="btn btn-outline-primary">Next</button>
         </div>
@@ -61,39 +61,43 @@
 
         // Function to load the CSV file and parse it into pages
         async function loadPages() {
-  fetch('pages.csv')
-    .then(response => response.text())
-    .then(csvText => {
-      const result = Papa.parse(csvText, {
-        header: true, // Use the first row as the header
-        skipEmptyLines: true, // Ignore empty lines
-      });
+            fetch('pages.csv')
+                .then(response => response.text())
+                .then(csvText => {
+                    const result = Papa.parse(csvText, {
+                        header: true, // Use the first row as the header
+                        skipEmptyLines: true, // Ignore empty lines
+                    });
 
-      // Access parsed data
-      if (result.errors.length) {
-        console.error('Error parsing CSV:', result.errors);
-      } else {
-        pages = result.data; // Parsed data
-        updateContent(); // Call the function to update the content
-      }
-    })
-    .catch(error => console.error('Error loading CSV:', error));
-}
+                    // Access parsed data
+                    if (result.errors.length) {
+                        console.error('Error parsing CSV:', result.errors);
+                    } else {
+                        pages = result.data; // Parsed data
+                        updateContent(); // Call the function to update the content
+                    }
+                })
+                .catch(error => console.error('Error loading CSV:', error));
+        }
 
 
         // Function to load the content of a text file and extract the title and content
-        async function loadContent(prefix, lang) {
+        async function loadContent(prefix, lang, filetype) {
             try {
-                const response = await fetch(`${prefix}_${lang}.txt`);
+                const response = await fetch(`${prefix}_${lang}.${filetype}`);
                 if (!response.ok) throw new Error('File not found');
-
                 const text = await response.text();
-                const lines = text.split('\n'); // Split content into lines
-                const title = lines[0]?.trim() || ''; // First line as the title
-                console.log("Page Title: " + title)
-                const content = lines.slice(1).join('\n').trim(); // Remaining lines as content
-
-                return { title, content };
+                if (filetype == "txt") {
+                    const lines = text.split('\n'); // Split content into lines
+                    const title = lines[0]?.trim() || ''; // First line as the title
+                    console.log("Page Title: " + title)
+                    const content = lines.slice(1).join('\n').trim(); // Remaining lines as content
+                    return { title, content };
+                } else {
+                    const content = text
+                    const title = null
+                    return { title, content };
+                }
             } catch (error) {
                 console.warn(`Error loading ${lang} content for ${prefix}:`, error);
                 return { title: '', content: `No content available for ${lang}.` }; // Fallback
@@ -105,8 +109,8 @@
             if (pages.length === 0) return;
 
             const page = pages[currentPage];
-            const ptData = await loadContent(page.content, 'pt');
-            const enData = await loadContent(page.content, 'en');
+            const ptData = await loadContent(page.content, 'pt', page.type);
+            const enData = await loadContent(page.content, 'en', page.type);
             console.log("Portuguese title is " + ptData.title)
             // Use the title from the text file if available; otherwise, fallback to the JSON title
             // Store titles for dynamic updates
@@ -115,9 +119,15 @@
 
             // Default to Portuguese title
             document.getElementById('pageTitle').textContent = ptData.title || page.title;
-
-            document.getElementById('portugueseContent').innerText = ptData.content;
-            document.getElementById('englishContent').innerText = enData.content;
+            console.log("File type is: " + page.type)
+            if (page.type == "txt") {
+                document.getElementById('portugueseContent').innerText = ptData.content;
+                document.getElementById('englishContent').innerText = enData.content;
+            } else {
+                console.log("inserting html fragment: ")
+                document.getElementById('portugueseContent').innerHTML = ptData.content;
+                document.getElementById('englishContent').innerHTML = enData.content;
+            }
 
             // Show or hide navigation buttons
             document.getElementById('prevButton').style.display = currentPage === 0 ? 'none' : 'inline-block';
@@ -152,7 +162,7 @@
 
         // Event listeners for the middle nav links
         document.getElementById('indexLink').addEventListener('click', () => {
-            currentPage = 1; // Index page
+            currentPage = 4; // Index page
             updateContent();
         });
 

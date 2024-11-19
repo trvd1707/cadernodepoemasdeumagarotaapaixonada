@@ -1,56 +1,58 @@
-title,content
-cover,cover
-index,toc
-Front Material,Front
-TERRA E MAR,Terra_Mar
-O AR DAS SEIS HORAS DA MANHÃ,ar6manha
-INVERNO,inverno
-IPÊ ROXO,iperoxo
-LUMINOSIDADE,luminosidade
-IN MEMORIAM,inmemoriam
-VIA LESTE,vialeste
-LAÇO DE FITA AZUL,fitaazul
-QUARTO COM VISTA,quartocomvista
-ESTA CASA,estacasa
-NESTA RUA,nestarua
-PARA ADRIANA,Adriana
-CAMALEOA,camaleoa
-SEDENTOS DE AMOR,sedentos
-SEDENTOS DE AMOR II,sedentosII
-MEU FILHO QUE VOA,filhoqvoa
-TODA MULHER,todamulher
-A IRRESISTÍVEL VONTADE DE VOAR,vontadedevoar
-A MÃE E A CRIANÇA,maecrianca
-AOS NOIVOS,aosnoivos
-PERSONAGENS,personagens
-VOCÊ É COMO UMA CASA,vocecomocasa
-AMAR VOCÊ,amarvoce
-AMOR,amoranjo
-ESTE CORAÇÃO,estecoracao
-CARÊNCIA,carencia
-CORAÇÃO MAGOADO,coracaomagoado
-DESAPEGO,desapego
-DEVAGARINHO,devagarinho
-INTERVALO DE TEMPO,intervalo
-HORA OBLÍQUA,horaobliqua
-FEITIÇO,feitico
-FICAR COM VOCÊ,ficarcomvoce
-PEDAÇOS DE AMOR,pedacosdeamor
-PROXIMIDADE,proximidade
-QUANDO TE VI,quandotevi
-"SAUDADES, MEU BEM, SAUDADES!",saudades
-VISÃO,visao
-VIGÍLIA,vigilia
-UMA LEMBRANÇA,umalembranca
-AMOR E COR,amorecor
-DATAS,datas
-DÚVIDA,duvida
-EU ESPERO QUE AS COISAS ACONTEÇAM,euespero
-FLORES MURCHAS,floresmurchas
-NOSTALGIA,nostalgia
-OBVIEDADE,obviedade
-POR QUE EXIGEM TANTO DE MIM?,exigem
-PROCURA,procura
-ROSAS MURCHAS,rosasmurchas
-VIA,via
-SIMPLES,simples
+title,content,type
+cover,cover,html
+Agradecimentos,agradecimentos,txt
+Prefacio,prefacio,txt
+Dedicatoria,dedicatoria,txt
+Indice,toc,html
+TERRA E MAR,Terra_Mar,txt
+O AR DAS SEIS HORAS DA MANHÃ,ar6manha,txt
+INVERNO,inverno,txt
+IPÊ ROXO,iperoxo,txt
+LUMINOSIDADE,luminosidade,txt
+IN MEMORIAM,inmemoriam,txt
+VIA LESTE,vialeste,txt
+LAÇO DE FITA AZUL,fitaazul,txt
+QUARTO COM VISTA,quartocomvista,txt
+ESTA CASA,estacasa,txt
+NESTA RUA,nestarua,txt
+PARA ADRIANA,Adriana,txt
+CAMALEOA,camaleoa,txt
+SEDENTOS DE AMOR,sedentos,txt
+SEDENTOS DE AMOR II,sedentosII,txt
+MEU FILHO QUE VOA,filhoqvoa,txt
+TODA MULHER,todamulher,txt
+A IRRESISTÍVEL VONTADE DE VOAR,vontadedevoar,txt
+A MÃE E A CRIANÇA,maecrianca,txt
+AOS NOIVOS,aosnoivos,txt
+PERSONAGENS,personagens,txt
+VOCÊ É COMO UMA CASA,vocecomocasa,txt
+AMAR VOCÊ,amarvoce,txt
+AMOR,amoranjo,txt
+ESTE CORAÇÃO,estecoracao,txt
+CARÊNCIA,carencia,txt
+CORAÇÃO MAGOADO,coracaomagoado,txt
+DESAPEGO,desapego,txt
+DEVAGARINHO,devagarinho,txt
+INTERVALO DE TEMPO,intervalo,txt
+HORA OBLÍQUA,horaobliqua,txt
+FEITIÇO,feitico,txt
+FICAR COM VOCÊ,ficarcomvoce,txt
+PEDAÇOS DE AMOR,pedacosdeamor,txt
+PROXIMIDADE,proximidade,txt
+QUANDO TE VI,quandotevi,txt
+"SAUDADES, MEU BEM, SAUDADES!",saudades,txt
+VISÃO,visao,txt
+VIGÍLIA,vigilia,txt
+UMA LEMBRANÇA,umalembranca,txt
+AMOR E COR,amorecor,txt
+DATAS,datas,txt
+DÚVIDA,duvida,txt
+EU ESPERO QUE AS COISAS ACONTEÇAM,euespero,txt
+FLORES MURCHAS,floresmurchas,txt
+NOSTALGIA,nostalgia,txt
+OBVIEDADE,obviedade,txt
+POR QUE EXIGEM TANTO DE MIM?,exigem,txt
+PROCURA,procura,txt
+ROSAS MURCHAS,rosasmurchas,txt
+VIA,via,txt
+SIMPLES,simples,txt
