@@ -1,0 +1,28 @@
+                      <FONT class=poemTitle face="Verdana, Arial, Helvetica, sans-serif">
+                        LOVE<br><br>
+                      </FONT>
+                      <FONT class=poemDedication face="Verdana, Arial, Helvetica, sans-serif">(Like Augusto dos
+                        Anjos)<br>
+                        <br>
+                      </FONT>
+                      <FONT class=poemText face="Verdana, Arial, Helvetica, sans-serif">
+                        In this moment of doubts<br>
+                        I come to beg you,<br>
+                        Tender being that floods my body,<br>
+                        That you do not question me with your yearnings.<br>
+                        <br>
+                        That you do not provoke me with your desires.<br>
+                        <br>
+                        You know, you know well,<br>
+                        That I choose you.<br>
+                        <br>
+                        Even if you tear me<br>
+                        From my infamous, insipid,<br>
+                        Inert, inglorious, painless life<br>
+                        And sustain me insolently<br>
+                        And abandon me indolent<br>
+                        In the distance, in time,<br>
+                        Perhaps late,<br>
+                        In the insane stream<br>
+                        That consumes me shapeless</p>
+                      </FONT>

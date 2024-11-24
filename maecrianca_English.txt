@@ -1,0 +1,27 @@
+                      <FONT class=poemTitle face="Verdana, Arial, Helvetica, sans-serif">
+                        THE MOTHER AND THE CHILD<br><br>
+                      </FONT>
+                      <FONT class=poemText face="Verdana, Arial, Helvetica, sans-serif">
+
+                        The mother loves the child<br>
+                        The sun shines on the child's face<br>
+                        The sun shines on the mother's face<br>
+                        But the mother loves the child.<br>
+                        <br>
+                        If the mother could take the sun for herself<br>
+                        She would take it far away<br>
+                        Where it would no longer shine<br>
+                        On the face of the child so young!<br>
+                        <br>
+                        But the mother cannot.<br>
+                        The mother loves the child<br>
+                        And stands there<br>
+                        With the sun on her face<br>
+                        And on the face of the child<br>
+                        <br>
+                        (If someone is capable
+                        Of loving the mother of the child and the child
+                        they will offer these two
+                        A place in the shade)
+                        </p>
+                      </FONT>
