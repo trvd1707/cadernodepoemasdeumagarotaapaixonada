@@ -12,6 +12,30 @@
             justify-content: center;
             flex-grow: 1;
         }
+
+        button.link-style {
+            all: unset;
+            /* Reset all default styles */
+            color: blue;
+            /* Link color */
+            text-decoration: underline;
+            /* Underline to mimic links */
+            cursor: pointer;
+            /* Pointer cursor for interactivity */
+            display: block;
+            /* Each button on a new line */
+            margin: 0;
+            /* Remove any default margin */
+            padding: 0;
+            /* Remove any default padding */
+        }
+
+        button.link-style:hover {
+            text-decoration: none;
+            /* Optional: No underline on hover */
+            color: darkblue;
+            /* Optional: Change color on hover */
+        }
     </style>
 </head>
 
@@ -107,8 +131,11 @@
         // Function to update the page content
         async function updateContent() {
             if (pages.length === 0) return;
-
             const page = pages[currentPage];
+            if (page.title === "Indice") {
+                generateIndexPage(pages)
+                return
+            }
             const ptData = await loadContent(page.content, 'pt', page.type);
             const enData = await loadContent(page.content, 'en', page.type);
             console.log("Portuguese title is " + ptData.title)
@@ -138,6 +165,32 @@
             const activeTab = document.getElementById(`${lang}-tab`);
             const newTitle = activeTab.dataset.title;
             document.getElementById('pageTitle').textContent = newTitle;
+        }
+        // Function to generate the index page
+        async function generateIndexPage(pages) {
+            const portugueseContent = document.getElementById('portugueseContent');
+            const englishContent = document.getElementById('englishContent');
+
+            // Clear existing content
+            portugueseContent.innerHTML = '';
+            englishContent.innerHTML = '';
+
+            // Generate links dynamically
+            pages.forEach((page,index) => {
+                const ptButton = document.createElement('button');
+                ptButton.textContent = page.title;
+                ptButton.className = 'link-style';
+                ptButton.onclick = () => {
+                    currentPage = index; // Use index or unique identifier for the page
+                    updateContent();
+                };
+                portugueseContent.appendChild(ptButton);
+
+                const enButton = document.createElement('button');
+                enButton.textContent = page.title;
+                enButton.className = 'link-style'
+                englishContent.appendChild(enButton);
+            });
         }
 
         // Event listeners for tabs
@@ -170,6 +223,8 @@
             currentPage = 2; // Intro page
             updateContent();
         });
+
+
 
         // Load pages when the document is ready
         document.addEventListener('DOMContentLoaded', loadPages);

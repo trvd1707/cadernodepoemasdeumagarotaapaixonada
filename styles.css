@@ -761,3 +761,19 @@ a {
   p.ctl {
     font-weight: bold
   }
+
+  button.link-style {
+    all: unset; /* Reset all default styles */
+    color: blue; /* Link color */
+    text-decoration: underline; /* Underline to mimic links */
+    cursor: pointer; /* Pointer cursor for interactivity */
+    display: block; /* Each button on a new line */
+    margin: 0; /* Remove any default margin */
+    padding: 0; /* Remove any default padding */
+  }
+  
+  button.link-style:hover {
+    text-decoration: none; /* Optional: No underline on hover */
+    color: darkblue; /* Optional: Change color on hover */
+  }
+  
