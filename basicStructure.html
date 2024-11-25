@@ -139,6 +139,7 @@
             const ptData = await loadContent(page.content, 'pt', page.type);
             const enData = await loadContent(page.content, 'en', page.type);
             console.log("Portuguese title is " + ptData.title)
+            console.log("Englis title is " + enData.title)
             // Use the title from the text file if available; otherwise, fallback to the JSON title
             // Store titles for dynamic updates
             document.getElementById('portuguese-tab').dataset.title = ptData.title || page.title;
