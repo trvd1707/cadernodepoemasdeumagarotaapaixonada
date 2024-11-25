@@ -84,7 +84,7 @@
         let currentPage = 0; // Start with the first page (Cover)
 
         // Function to load the CSV file and parse it into pages
-        async function loadPages() {
+     function loadPages() {
             fetch('pages.csv')
                 .then(response => response.text())
                 .then(csvText => {
@@ -160,6 +160,9 @@
             // Show or hide navigation buttons
             document.getElementById('prevButton').style.display = currentPage === 0 ? 'none' : 'inline-block';
             document.getElementById('nextButton').style.display = currentPage === pages.length - 1 ? 'none' : 'inline-block';
+            const activeTab = document.querySelector(".tab-pane.show.active");
+                console.log(`The active tab is: ${activeTab.id}`);
+            updateTitleBasedOnTab(activeTab.id);
         }
         // Update the title when a tab is clicked
         function updateTitleBasedOnTab(lang) {
@@ -168,7 +171,7 @@
             document.getElementById('pageTitle').textContent = newTitle;
         }
         // Function to generate the index page
-        async function generateIndexPage(pages) {
+         function generateIndexPage(pages) {
             const portugueseContent = document.getElementById('portugueseContent');
             const englishContent = document.getElementById('englishContent');
 
@@ -177,7 +180,7 @@
             englishContent.innerHTML = '';
 
             // Generate links dynamically
-            pages.forEach((page,index) => {
+            pages.forEach((page, index) => {
                 const ptButton = document.createElement('button');
                 ptButton.textContent = page.title;
                 ptButton.className = 'link-style';
@@ -186,10 +189,14 @@
                     updateContent();
                 };
                 portugueseContent.appendChild(ptButton);
-
+// @todo: create English index
                 const enButton = document.createElement('button');
                 enButton.textContent = page.title;
-                enButton.className = 'link-style'
+                enButton.className = 'link-style';
+                enButton.onclick = () => {
+                    currentPage = index; // Use index or unique identifier for the page
+                    updateContent();
+                };
                 englishContent.appendChild(enButton);
             });
         }
@@ -225,8 +232,15 @@
             updateContent();
         });
 
-
-
+        document.addEventListener("DOMContentLoaded", () => {
+            const activeTab = document.querySelector(".tab-pane.show.active");
+            if (activeTab) {
+                console.log(`The active tab is: ${activeTab.id}`);
+                // You can perform actions based on the active tab here.
+            } else {
+                console.log("No active tab found.");
+            }
+        });
         // Load pages when the document is ready
         document.addEventListener('DOMContentLoaded', loadPages);
     </script>
