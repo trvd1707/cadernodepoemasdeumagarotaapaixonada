@@ -74,6 +74,6 @@ function showContent(language, event = null) {
 
 // Show Portuguese content on load
 window.onload = function () {
-    // showContent('portuguese', null);
-    // document.querySelector('.tab').classList.add('active');
+    showContent('portuguese', null);
+    document.querySelector('.tab').classList.add('active');
 };
