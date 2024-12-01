@@ -134,28 +134,27 @@
             const page = pages[currentPage];
             if (page.title === "Indice") {
                 generateIndexPage(pages);
-                updateTitleBasedOnTab(activeTab.id);
-                return;
-            }
-            const ptData = await loadContent(page.content, 'pt', page.type);
-            const enData = await loadContent(page.content, 'en', page.type);
-            console.log("Portuguese title is " + ptData.title)
-            console.log("Englis title is " + enData.title)
-            // Use the title from the text file if available; otherwise, fallback to the JSON title
-            // Store titles for dynamic updates
-            document.getElementById('portuguese-tab').dataset.title = ptData.title || page.title;
-            document.getElementById('english-tab').dataset.title = enData.title || page.title;
-
-            // Default to Portuguese title
-            document.getElementById('pageTitle').textContent = ptData.title || page.title;
-            console.log("File type is: " + page.type)
-            if (page.type == "txt") {
-                document.getElementById('portugueseContent').innerText = ptData.content;
-                document.getElementById('englishContent').innerText = enData.content;
             } else {
-                console.log("inserting html fragment: ")
-                document.getElementById('portugueseContent').innerHTML = ptData.content;
-                document.getElementById('englishContent').innerHTML = enData.content;
+                const ptData = await loadContent(page.content, 'pt', page.type);
+                const enData = await loadContent(page.content, 'en', page.type);
+                console.log("Portuguese title is " + ptData.title)
+                console.log("Englis title is " + enData.title)
+                // Use the title from the text file if available; otherwise, fallback to the JSON title
+                // Store titles for dynamic updates
+                document.getElementById('portuguese-tab').dataset.title = ptData.title || page.title;
+                document.getElementById('english-tab').dataset.title = enData.title || page.title;
+
+                // Default to Portuguese title
+                document.getElementById('pageTitle').textContent = ptData.title || page.title;
+                console.log("File type is: " + page.type)
+                if (page.type == "txt") {
+                  document.getElementById('portugueseContent').innerText = ptData.content;
+                  document.getElementById('englishContent').innerText = enData.content;
+                } else {
+                  console.log("inserting html fragment: ")
+                  document.getElementById('portugueseContent').innerHTML = ptData.content;
+                  document.getElementById('englishContent').innerHTML = enData.content;
+                }
             }
 
             // Show or hide navigation buttons
