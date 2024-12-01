@@ -133,8 +133,9 @@
             if (pages.length === 0) return;
             const page = pages[currentPage];
             if (page.title === "Indice") {
-                generateIndexPage(pages)
-                return
+                generateIndexPage(pages);
+                updateTitleBasedOnTab(activeTab.id);
+                return;
             }
             const ptData = await loadContent(page.content, 'pt', page.type);
             const enData = await loadContent(page.content, 'en', page.type);
@@ -172,8 +173,10 @@
         }
         // Function to generate the index page
          function generateIndexPage(pages) {
-            const portugueseContent = document.getElementById('portugueseContent');
-            const englishContent = document.getElementById('englishContent');
+            const ptTab = document.getElementById(`portuguese-tab`);
+            const enTab = document.getElementById(`english-tab`);
+            ptTab.dataset.title = 'Indice';
+            enTab.dataset.title = 'Table of Contents';
 
             // Clear existing content
             portugueseContent.innerHTML = '';
