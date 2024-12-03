@@ -141,8 +141,9 @@
                 console.log("Englis title is " + enData.title)
                 // Use the title from the text file if available; otherwise, fallback to the JSON title
                 // Store titles for dynamic updates
-                document.getElementById('portuguese-tab').dataset.title = ptData.title || page.title;
-                document.getElementById('english-tab').dataset.title = enData.title || page.title;
+                let tempTitle = page.title === "cover" ? "" : page.title;
+                document.getElementById('portuguese-tab').dataset.title = ptData.title || tempTitle;
+                document.getElementById('english-tab').dataset.title = enData.title || tempTitle;
 
                 // Default to Portuguese title
                 document.getElementById('pageTitle').textContent = ptData.title || page.title;
