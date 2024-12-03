@@ -36,20 +36,34 @@
             color: darkblue;
             /* Optional: Change color on hover */
         }
+
+        .first-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .second-line {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-            <button id="prevButton" class="btn btn-outline-primary">Previous</button>
-            <div class="middle-nav-links">
-                <a href="#" class="nav-link" id="indexLink">Índice</a>
-                <a href="#" class="nav-link" id="introLink">Prefácio</a>
+        <div class="container-fluid d-flex flex-column">
+            <div class="first-line d-flex justify-content-between">
+                <button id="prevButton" class="btn btn-outline-primary">Previous</button>
+                <div class="middle-nav-links">
+                    <a href="#" class="nav-link" id="indexLink">Índice</a>
+                    <a href="#" class="nav-link" id="introLink">Prefácio</a>
+                </div>
+                <button id="nextButton" class="btn btn-outline-primary">Next</button>
             </div>
-            <button id="nextButton" class="btn btn-outline-primary">Next</button>
         </div>
-        <div class="container-fluid">
+        <div class="second-line text-center mt-2">
             <a href="#" id="emailLink" class="nav-link">Send Your Comments</a>
         </div>
     </nav>
@@ -197,7 +211,7 @@
             const activeTab = document.getElementById(`${lang}-tab`);
             const newTitle = activeTab.dataset.title;
             document.getElementById('pageTitle').textContent = newTitle;
-            updateEmailLink(newTitle === ""? "cover":newTitle)
+            updateEmailLink(newTitle === "" ? "cover" : newTitle)
         }
         // Function to generate the index page
         function generateIndexPage(pages) {
