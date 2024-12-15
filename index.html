@@ -4,8 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Poemas-BootStrapVersion</title>
+    <title>Caderno De Poemas</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <style>
         .middle-nav-links {
             display: flex;
@@ -48,6 +49,35 @@
             text-align: center;
             margin-top: 10px;
         }
+
+        .audio-player {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        #play-pause-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        #play-pause-btn:hover {
+            background-color: #0056b3;
+        }
+
+        .material-icons {
+            font-size: 24px;
+        }
     </style>
 </head>
 
@@ -64,7 +94,17 @@
             </div>
         </div>
         <div class="second-line text-center mt-2">
-            <a href="#" id="emailLink" class="nav-link">Send Your Comments</a>
+            <!--audio id="myAudio" src="river.mp3"></audio-->
+            <a href="#" id="emailLink" class="nav-link">
+                <font size=10>📧</font>
+            </a>
+        </div>
+        <div class="audio-player">
+            <div id="audio-player" class="d-none">
+                <button id="play-pause-btn" class="btn">
+                    <span id="icon" class="material-icons">play_arrow</span>
+                </button>
+            </div>
         </div>
     </nav>
 
@@ -103,6 +143,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
     <script>
         let pages = []; // Array to store page data
         let currentPage = 0; // Start with the first page (Cover)
@@ -158,8 +199,8 @@
             if (page.title === "Indice") {
                 generateIndexPage(pages);
             } else {
-                const ptData = await loadContent(page.content, 'pt', page.type);
-                const enData = await loadContent(page.content, 'en', page.type);
+                const ptData = await loadContent(page.folder, 'pt', page.textType);
+                const enData = await loadContent(page.folder, 'en', page.textType);
                 // Use the title from the text file if available; otherwise, fallback to the JSON title
                 // Store titles for dynamic updates
                 let tempTitle = page.title === "cover" ? "" : page.title;
@@ -168,7 +209,7 @@
 
                 // Default to Portuguese title
                 document.getElementById('pageTitle').textContent = ptData.title || page.title;
-                if (page.type == "txt") {
+                if (page.textType == "txt") {
                     document.getElementById('portugueseContent').innerText = ptData.content;
                     document.getElementById('englishContent').innerText = enData.content;
                 } else {
@@ -185,6 +226,8 @@
             updateTitleBasedOnTab(activeTab.id);
             if (page.title === "cover") {
                 playSongOnCoverPage();
+            } else {
+                loadPageAudio("audiofiles/" + page.folder, 'pt')
             }
         }
         function updateEmailLink(title) {
@@ -197,14 +240,49 @@
 
             emailLink.href = mailtoHref;
         }
+        let sound;
+
+        function loadAudio(title, locale, type) {
+            const audioFile = locale === '' ? title + '.mp3' : title + '_' + locale + '.' + type; // Construct file path
+            console.log("creating audio player for ", audioFile)
+            if (sound) {
+                sound.unload(); // Unload previous sound if any
+            }
+            sound = new Howl({
+                src: [audioFile],
+                format: ['mp3'],
+                html5: false, // Ensure playback compatibility
+                onload: () => {
+                    console.log('Loading:', audioFile)
+                    const audioControls = document.getElementById("audio-player");
+                    audioControls.classList.remove("d-none"); // Show buttons
+                },
+                onplay: () => {
+                    console.log('Playing:', audioFile)
+                    const audioControls = document.getElementById("audio-player");
+                    audioControls.classList.remove("d-none"); // Show buttons
+                },
+                onloaderror: (id, err) => {
+                    console.error('Audio Load Error:', err)
+                    const audioControls = document.getElementById("audio-player");
+                    audioControls.classList.add("d-none"); // remove buttons
+                },
+                onend: () => {
+                    const icon = document.getElementById("icon");
+                    icon.textContent = "play_arrow";
+                }
+            });
+            sound.pause();
+        }
+
+        function loadPageAudio(filename, locale) {
+            console.log("playing poem")
+            loadAudio(filename, locale, "m4a"); // Dynamically pass title and locale
+        }
 
         function playSongOnCoverPage() {
-            // You can perform actions based on the active tab here.
-            const audio = document.getElementById('myAudio');
-            // Check if autoplay is allowed
-            audio.play().catch(error => {
-                console.log('Autoplay prevented. User interaction is required.', error);
-            });
+            console.log("playing River song")
+            loadAudio('river', ''); // Dynamically pass title and locale
         }
         // Update the title when a tab is clicked
         function updateTitleBasedOnTab(lang) {
@@ -245,6 +323,24 @@
                 englishContent.appendChild(enButton);
             });
         }
+
+        const playPauseBtn = document.getElementById("play-pause-btn");
+        const icon = document.getElementById("icon");
+
+        playPauseBtn.addEventListener("click", () => {
+            console.log("Play/Pause Button clicked")
+            if (sound) {
+                if (icon.textContent == "play_arrow") {
+                    console.log("player is paused")
+                    sound.play();
+                    icon.textContent = "pause"; // Update icon to pause
+                } else {
+                    console.log("player is playing")
+                    sound.pause();
+                    icon.textContent = "play_arrow"; // Update icon to play
+                }
+            }
+        });
 
         // Event listeners for tabs
         document.getElementById('portuguese-tab').addEventListener('click', () => updateTitleBasedOnTab('portuguese'));
@@ -287,6 +383,7 @@
         });
         // Load pages when the document is ready
         document.addEventListener('DOMContentLoaded', loadPages);
+
     </script>
 </body>
 
