@@ -1,134 +1,390 @@
-<!doctype html public "-//w3c//dtd html 4.0 transitional//en">
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="GENERATOR" content="Mozilla/4.72 [en] (WinNT; U) [Netscape]">
-    <TITLE>Caderno de Poemas de Uma Garota Apaixonada</TITLE>
-    <link rel="stylesheet" href="styles.css"></head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caderno De Poemas</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        .middle-nav-links {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+        }
 
-<body bgcolor="#FFFFFF">
-    &nbsp;
-    <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="580" HEIGHT="430" BGCOLOR="#000000">
-        <tr BGCOLOR="#6666CC" height="30">
-            <td ALIGN=CENTER VALIGN=CENTER WIDTH="100" HEIGHT="30" BGCOLOR="#000000">
-                <font size=10>🕊️</font></td>
+        button.link-style {
+            all: unset;
+            /* Reset all default styles */
+            color: blue;
+            /* Link color */
+            text-decoration: underline;
+            /* Underline to mimic links */
+            cursor: pointer;
+            /* Pointer cursor for interactivity */
+            display: block;
+            /* Each button on a new line */
+            margin: 0;
+            /* Remove any default margin */
+            padding: 0;
+            /* Remove any default padding */
+        }
 
-            <td ALIGN=CENTER VALIGN=CENTER WIDTH="480" HEIGHT="30" BGCOLOR="#6666CC">
-                <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="472" HEIGHT="22">
-                    <tr>
-                        <td ALIGN=RIGHT VALIGN=CENTER><b>
-                                <font face="Verdana">
-                                    <font color="#99CCFF">
-                                        <font size=-1>CADERNO
-                                            DE POEMAS DE UMA GAROTA APAIXONADA <br> Teresa Rios - 2001</font>
-                                    </font>
-                                </font>
-                            </b></td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+        button.link-style:hover {
+            text-decoration: none;
+            /* Optional: No underline on hover */
+            color: darkblue;
+            /* Optional: Change color on hover */
+        }
 
-        <tr BGCOLOR="#6666CC" height="21">
-            <td ALIGN=CENTER VALIGN=CENTER WIDTH="100" HEIGHT="21" BGCOLOR="#6666CC">
-                <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="92" HEIGHT="12">
-                    <tr>
-                        <td WIDTH="92"></td>
-                    </tr>
-                </table>
-            </td>
+        .first-line {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-            <td ALIGN=CENTER VALIGN=CENTER WIDTH="480" HEIGHT="21" BGCOLOR="#333399">
-                <table BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="472" HEIGHT="12">
-                    <tr>
-                        <td>
-                            <div align=right>
-                                <font face="Verdana">
-                                    <font color="#FFFFFF">
-                                        <font size=-1><a href="toc.html">&rAarr;</a></font>
-                                    </font>
-                                </font>
-                            </div>
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+        .second-line {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
 
-        <tr BGCOLOR="#6666CC" height="360">
-            <td ALIGN=CENTER VALIGN=TOP WIDTH="100" HEIGHT="360" BGCOLOR="#6666CC">
-                <a href="mailto:trvd1707@gmail.com"><font size=10>📧</font></a><br>
-                <a href="2001Book.html"><font size=10>📓</font><font size=1><br>2001 book</font></a>
-            </td>
-            <td VALIGN=TOP WIDTH="480" HEIGHT="360" BGCOLOR="#FFFFFF">
-                <table CELLSPACING=0 CELLPADDING=5 WIDTH="300">
-                    <tr>
-                        <td COLSPAN="2">
-                            <p>
-                            <h1>Caderno de Poemas de uma Garota Apaixonada</h1></p>
-                            <p>
-                                <h5>Teresa Rios</h5>
-                            <p>
-                                <h6>Poemas adolescentes de uma garota desabrochando para a
-                                    vida e para o amor.</h6>
-                            <p><img SRC="U4743-4544-W.jpeg" BORDER=0>
-                                <br>&nbsp;
-                                <br>&nbsp;
-                            <p>
-                                <font face=""><a href="toc.html">Click Here to Enter</a></font>
-                                <br>&nbsp;
-                                <br>&nbsp;
-                        </td>
-                    </tr>
-                </table>
-            </td>
-        </tr>
+        .audio-player {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
 
-        <tr ALIGN=CENTER VALIGN=CENTER height="20">
-            <td ALIGN=CENTER VALIGN=CENTER WIDTH="100" HEIGHT="20" BGCOLOR="#6666CC">
-                <table BORDER=0 CELLSPACING=0 CELLPADDING=0 WIDTH="92" HEIGHT="12">
-                    <tr height="12">
-                        <td ALIGN=LEFT VALIGN=BOTTOM WIDTH="88" HEIGHT="12"><u>
-                                <font face="Verdana">
-                                    <font color="#99CCFF">
-                                        <font size=-2></font>
-                                    </font>
-                                </font>
-                            </u></td>
-                    </tr>
-                </table>
-            </td>
+        #play-pause-btn {
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            outline: none;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
 
-            <td VALIGN=CENTER WIDTH="480" HEIGHT="20" BGCOLOR="#333399">
-                <center>
-                    <table BORDER=0 CELLSPACING=0 CELLPADDING=2 WIDTH="472" HEIGHT="12">
-                        <tr>
-                            <td>
-                                <div align=right>
-                                    <font color="#FFFFFF" face="Verdana" size="5">
-                                        <a href="toc.html" style="color:white;">&rarr;</a>
-                                    </font>
-                                </div>
-                            </td>
-                        </tr>
-                    </table>
-                </center>
-            </td>
-        </tr>
+        #play-pause-btn:hover {
+            background-color: #0056b3;
+        }
 
-        <tr ALIGN=CENTER VALIGN=CENTER BGCOLOR="#99CCFF" height="20">
-            <td ALIGN=RIGHT VALIGN=CENTER COLSPAN="2" WIDTH="580" HEIGHT="20">
-                <font face="Arial, Helvetica, sans-serif">
-                    <font size=-2>&copy; 1998,
-                        1999, 2000, 2001 <a href="mailto:trvd1707@gmail.com">Teresa Rios Van Dusen</a> All
-                        Rights Reserved.&nbsp;</font>
-                </font>
-                <br>
-            </td>
-        </tr>
-    </table>
+        .material-icons {
+            font-size: 24px;
+        }
+    </style>
+</head>
 
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid d-flex flex-column">
+            <div class="first-line d-flex justify-content-between">
+                <button id="prevButton" class="btn btn-outline-primary">Previous</button>
+                <div class="middle-nav-links">
+                    <a href="#" class="nav-link" id="indexLink">Índice</a>
+                    <a href="#" class="nav-link" id="introLink">Prefácio</a>
+                </div>
+                <button id="nextButton" class="btn btn-outline-primary">Next</button>
+            </div>
+        </div>
+        <div class="second-line text-center mt-2">
+            <!--audio id="myAudio" src="river.mp3"></audio-->
+            <a href="#" id="emailLink" class="nav-link">
+                <font size=10>📧</font>
+            </a>
+        </div>
+        <div class="audio-player">
+            <div id="audio-player" class="d-none">
+                <button id="play-pause-btn" class="btn">
+                    <span id="icon" class="material-icons">play_arrow</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div id="content" class="container mt-4">
+        <h1 id="pageTitle"></h1>
+        <ul class="nav nav-tabs" id="languageTabs" role="tablist">
+            <li class="nav-item" role="presentation">
+                <a class="nav-link active" id="portuguese-tab" data-toggle="tab" href="#portuguese" role="tab"
+                    aria-controls="portuguese" aria-selected="true">Portuguese</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="english-tab" data-toggle="tab" href="#english" role="tab"
+                    aria-controls="english" aria-selected="false">English</a>
+            </li>
+        </ul>
+        <div class="tab-content" id="tabContent">
+            <div class="tab-pane fade show active" id="portuguese" role="tabpanel" aria-labelledby="portuguese-tab">
+                <br><br>
+                <p id="portugueseContent"></p>
+            </div>
+            <div class="tab-pane fade" id="english" role="tabpanel" aria-labelledby="english-tab">
+                <br><br>
+                <p id="englishContent"></p>
+            </div>
+        </div>
+    </div>
+    <div>
+        <font face="Arial, Helvetica, sans-serif">
+            <font size=-2>&copy; 1998,
+                1999, 2000, 2001 <a href="mailto:trvd1707+book@gmail.com">Teresa Rios Van Dusen</a> All
+                Rights Reserved.&nbsp;</font>
+        </font>
+    </div>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/howler/2.2.3/howler.min.js"></script>
+    <script>
+        let pages = []; // Array to store page data
+        let currentPage = 0; // Start with the first page (Cover)
+
+        // Function to load the CSV file and parse it into pages
+        function loadPages() {
+            fetch('pages.csv')
+                .then(response => response.text())
+                .then(csvText => {
+                    const result = Papa.parse(csvText, {
+                        header: true, // Use the first row as the header
+                        skipEmptyLines: true, // Ignore empty lines
+                    });
+
+                    // Access parsed data
+                    if (result.errors.length) {
+                        console.error('Error parsing CSV:', result.errors);
+                    } else {
+                        pages = result.data; // Parsed data
+                        updateContent(); // Call the function to update the content
+                    }
+                })
+                .catch(error => console.error('Error loading CSV:', error));
+        }
+
+
+        // Function to load the content of a text file and extract the title and content
+        async function loadContent(prefix, lang, filetype) {
+            try {
+                const response = await fetch(`${prefix}_${lang}.${filetype}`);
+                if (!response.ok) throw new Error('File not found');
+                const text = await response.text();
+                if (filetype == "txt") {
+                    const lines = text.split('\n'); // Split content into lines
+                    const title = lines[0]?.trim() || ''; // First line as the title
+                    const content = lines.slice(1).join('\n').trim(); // Remaining lines as content
+                    return { title, content };
+                } else {
+                    const content = text
+                    const title = null
+                    return { title, content };
+                }
+            } catch (error) {
+                console.warn(`Error loading ${lang} content for ${prefix}:`, error);
+                return { title: '', content: `No content available for ${lang}.` }; // Fallback
+            }
+        }
+
+        // Function to update the page content
+        async function updateContent() {
+            if (pages.length === 0) return;
+            const page = pages[currentPage];
+            if (page.title === "Indice") {
+                generateIndexPage(pages);
+            } else {
+                const ptData = await loadContent(page.folder, 'pt', page.textType);
+                const enData = await loadContent(page.folder, 'en', page.textType);
+                // Use the title from the text file if available; otherwise, fallback to the JSON title
+                // Store titles for dynamic updates
+                let tempTitle = page.title === "cover" ? "" : page.title;
+                document.getElementById('portuguese-tab').dataset.title = ptData.title || tempTitle;
+                document.getElementById('english-tab').dataset.title = enData.title || tempTitle;
+
+                // Default to Portuguese title
+                document.getElementById('pageTitle').textContent = ptData.title || page.title;
+                if (page.textType == "txt") {
+                    document.getElementById('portugueseContent').innerText = ptData.content;
+                    document.getElementById('englishContent').innerText = enData.content;
+                } else {
+                    console.log("inserting html fragment: ")
+                    document.getElementById('portugueseContent').innerHTML = ptData.content;
+                    document.getElementById('englishContent').innerHTML = enData.content;
+                }
+            }
+
+            // Show or hide navigation buttons
+            document.getElementById('prevButton').style.display = currentPage === 0 ? 'none' : 'inline-block';
+            document.getElementById('nextButton').style.display = currentPage === pages.length - 1 ? 'none' : 'inline-block';
+            const activeTab = document.querySelector(".tab-pane.show.active");
+            updateTitleBasedOnTab(activeTab.id);
+            if (page.title === "cover") {
+                playSongOnCoverPage();
+            } else {
+                loadPageAudio("audiofiles/" + page.folder, 'pt')
+            }
+        }
+        function updateEmailLink(title) {
+            const pageTitle = title.trim();
+            const emailLink = document.getElementById("emailLink");
+
+            const email = "trvd1707+book@gmail.com";
+            const subject = encodeURIComponent(pageTitle);
+            const mailtoHref = `mailto:${email}?subject=${subject}`;
+
+            emailLink.href = mailtoHref;
+        }
+        let sound;
+
+        function loadAudio(title, locale, type) {
+            const audioFile = locale === '' ? title + '.mp3' : title + '_' + locale + '.' + type; // Construct file path
+            console.log("creating audio player for ", audioFile)
+            if (sound) {
+                sound.unload(); // Unload previous sound if any
+            }
+            sound = new Howl({
+                src: [audioFile],
+                format: ['mp3'],
+                html5: false, // Ensure playback compatibility
+                onload: () => {
+                    console.log('Loading:', audioFile)
+                    const audioControls = document.getElementById("audio-player");
+                    audioControls.classList.remove("d-none"); // Show buttons
+                },
+                onplay: () => {
+                    console.log('Playing:', audioFile)
+                    const audioControls = document.getElementById("audio-player");
+                    audioControls.classList.remove("d-none"); // Show buttons
+                },
+                onloaderror: (id, err) => {
+                    console.error('Audio Load Error:', err)
+                    const audioControls = document.getElementById("audio-player");
+                    audioControls.classList.add("d-none"); // remove buttons
+                },
+                onend: () => {
+                    const icon = document.getElementById("icon");
+                    icon.textContent = "play_arrow";
+                }
+            });
+            sound.pause();
+        }
+
+        function loadPageAudio(filename, locale) {
+            console.log("playing poem")
+            loadAudio(filename, locale, "m4a"); // Dynamically pass title and locale
+        }
+
+        function playSongOnCoverPage() {
+            console.log("playing River song")
+            loadAudio('river', ''); // Dynamically pass title and locale
+        }
+        // Update the title when a tab is clicked
+        function updateTitleBasedOnTab(lang) {
+            const activeTab = document.getElementById(`${lang}-tab`);
+            const newTitle = activeTab.dataset.title;
+            document.getElementById('pageTitle').textContent = newTitle;
+            updateEmailLink(newTitle === "" ? "cover" : newTitle)
+        }
+        // Function to generate the index page
+        function generateIndexPage(pages) {
+            const ptTab = document.getElementById(`portuguese-tab`);
+            const enTab = document.getElementById(`english-tab`);
+            ptTab.dataset.title = 'Indice';
+            enTab.dataset.title = 'Table of Contents';
+
+            // Clear existing content
+            portugueseContent.innerHTML = '';
+            englishContent.innerHTML = '';
+
+            // Generate links dynamically
+            pages.forEach((page, index) => {
+                const ptButton = document.createElement('button');
+                ptButton.textContent = page.title;
+                ptButton.className = 'link-style';
+                ptButton.onclick = () => {
+                    currentPage = index; // Use index or unique identifier for the page
+                    updateContent();
+                };
+                portugueseContent.appendChild(ptButton);
+                // @todo: create English index
+                const enButton = document.createElement('button');
+                enButton.textContent = page.title;
+                enButton.className = 'link-style';
+                enButton.onclick = () => {
+                    currentPage = index; // Use index or unique identifier for the page
+                    updateContent();
+                };
+                englishContent.appendChild(enButton);
+            });
+        }
+
+        const playPauseBtn = document.getElementById("play-pause-btn");
+        const icon = document.getElementById("icon");
+
+        playPauseBtn.addEventListener("click", () => {
+            console.log("Play/Pause Button clicked")
+            if (sound) {
+                if (icon.textContent == "play_arrow") {
+                    console.log("player is paused")
+                    sound.play();
+                    icon.textContent = "pause"; // Update icon to pause
+                } else {
+                    console.log("player is playing")
+                    sound.pause();
+                    icon.textContent = "play_arrow"; // Update icon to play
+                }
+            }
+        });
+
+        // Event listeners for tabs
+        document.getElementById('portuguese-tab').addEventListener('click', () => updateTitleBasedOnTab('portuguese'));
+        document.getElementById('english-tab').addEventListener('click', () => updateTitleBasedOnTab('english'));
+
+
+        // Event listeners for the buttons
+        document.getElementById('prevButton').addEventListener('click', () => {
+            if (currentPage > 0) {
+                currentPage--;
+                updateContent();
+            }
+        });
+
+        document.getElementById('nextButton').addEventListener('click', () => {
+            if (currentPage < pages.length - 1) {
+                currentPage++;
+                updateContent();
+            }
+        });
+
+        // Event listeners for the middle nav links
+        document.getElementById('indexLink').addEventListener('click', () => {
+            currentPage = 4; // Index page
+            updateContent();
+        });
+
+        document.getElementById('introLink').addEventListener('click', () => {
+            currentPage = 2; // Intro page
+            updateContent();
+        });
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const activeTab = document.querySelector(".tab-pane.show.active");
+            if (activeTab) {
+                console.log("active Tab found")
+            } else {
+                console.log("No active tab found.");
+            }
+        });
+        // Load pages when the document is ready
+        document.addEventListener('DOMContentLoaded', loadPages);
+
+    </script>
 </body>
 
 </html>

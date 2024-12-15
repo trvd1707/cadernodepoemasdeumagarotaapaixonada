@@ -1,58 +1,58 @@
-title,content,type
-cover,cover,html
-Agradecimentos,agradecimentos,txt
-Prefacio,prefacio,txt
-Dedicatoria,dedicatoria,txt
-Indice,toc,html
-TERRA E MAR,Terra_Mar,txt
-O AR DAS SEIS HORAS DA MANHÃ,ar6manha,txt
-INVERNO,inverno,txt
-IPÊ ROXO,iperoxo,txt
-LUMINOSIDADE,luminosidade,txt
-IN MEMORIAM,inmemoriam,txt
-VIA LESTE,vialeste,txt
-LAÇO DE FITA AZUL,fitaazul,txt
-QUARTO COM VISTA,quartocomvista,txt
-ESTA CASA,estacasa,txt
-NESTA RUA,nestarua,txt
-PARA ADRIANA,Adriana,txt
-CAMALEOA,camaleoa,txt
-SEDENTOS DE AMOR,sedentos,txt
-SEDENTOS DE AMOR II,sedentosII,txt
-MEU FILHO QUE VOA,filhoqvoa,txt
-TODA MULHER,todamulher,txt
-A IRRESISTÍVEL VONTADE DE VOAR,vontadedevoar,txt
-A MÃE E A CRIANÇA,maecrianca,txt
-AOS NOIVOS,aosnoivos,txt
-PERSONAGENS,personagens,txt
-VOCÊ É COMO UMA CASA,vocecomocasa,txt
-AMAR VOCÊ,amarvoce,txt
-AMOR,amoranjo,txt
-ESTE CORAÇÃO,estecoracao,txt
-CARÊNCIA,carencia,txt
-CORAÇÃO MAGOADO,coracaomagoado,txt
-DESAPEGO,desapego,txt
-DEVAGARINHO,devagarinho,txt
-INTERVALO DE TEMPO,intervalo,txt
-HORA OBLÍQUA,horaobliqua,txt
-FEITIÇO,feitico,txt
-FICAR COM VOCÊ,ficarcomvoce,txt
-PEDAÇOS DE AMOR,pedacosdeamor,txt
-PROXIMIDADE,proximidade,txt
-QUANDO TE VI,quandotevi,txt
-"SAUDADES, MEU BEM, SAUDADES!",saudades,txt
-VISÃO,visao,txt
-VIGÍLIA,vigilia,txt
-UMA LEMBRANÇA,umalembranca,txt
-AMOR E COR,amorecor,txt
-DATAS,datas,txt
-DÚVIDA,duvida,txt
-EU ESPERO QUE AS COISAS ACONTEÇAM,euespero,txt
-FLORES MURCHAS,floresmurchas,txt
-NOSTALGIA,nostalgia,txt
-OBVIEDADE,obviedade,txt
-POR QUE EXIGEM TANTO DE MIM?,exigem,txt
-PROCURA,procura,txt
-ROSAS MURCHAS,rosasmurchas,txt
-VIA,via,txt
-SIMPLES,simples,txt
+title,folder,textType,audioFIle
+cover,cover,html,river.mp3
+Agradecimentos,agradecimentos,txt,
+Prefacio,prefacio,txt,
+Dedicatoria,dedicatoria,txt,
+Indice,toc,html,
+TERRA E MAR,Terra_Mar,txt,m4a
+O AR DAS SEIS HORAS DA MANHÃ,ar6manha,txt,
+INVERNO,inverno,txt,m4a
+IPÊ ROXO,iperoxo,txt,
+LUMINOSIDADE,luminosidade,txt,
+IN MEMORIAM,inmemoriam,txt,m4a
+VIA LESTE,vialeste,txt,
+LAÇO DE FITA AZUL,fitaazul,txt,
+QUARTO COM VISTA,quartocomvista,txt,
+ESTA CASA,estacasa,txt,
+NESTA RUA,nestarua,txt,
+PARA ADRIANA,Adriana,txt,m4a
+CAMALEOA,camaleoa,txt,
+SEDENTOS DE AMOR,sedentos,txt,
+SEDENTOS DE AMOR II,sedentosII,txt,
+MEU FILHO QUE VOA,filhoqvoa,txt,
+TODA MULHER,todamulher,txt,
+A IRRESISTÍVEL VONTADE DE VOAR,vontadedevoar,txt,
+A MÃE E A CRIANÇA,maecrianca,txt,m4a
+AOS NOIVOS,aosnoivos,txt,
+PERSONAGENS,personagens,txt,
+VOCÊ É COMO UMA CASA,vocecomocasa,txt,
+AMAR VOCÊ,amarvoce,txt,
+AMOR,amoranjo,txt,m4a
+ESTE CORAÇÃO,estecoracao,txt,m4a
+CARÊNCIA,carencia,txt,
+CORAÇÃO MAGOADO,coracaomagoado,txt,m4a
+DESAPEGO,desapego,txt,m4a
+DEVAGARINHO,devagarinho,txt,
+INTERVALO DE TEMPO,intervalo,txt,
+HORA OBLÍQUA,horaobliqua,txt,m4a
+FEITIÇO,feitico,txt,m4a
+FICAR COM VOCÊ,ficarcomvoce,txt,
+PEDAÇOS DE AMOR,pedacosdeamor,txt,
+PROXIMIDADE,proximidade,txt,
+QUANDO TE VI,quandotevi,txt,
+"SAUDADES, MEU BEM, SAUDADES!",saudades,txt,m4a
+VISÃO,visao,txt,
+VIGÍLIA,vigilia,txt,m4a
+UMA LEMBRANÇA,umalembranca,txt,
+AMOR E COR,amorecor,txt,m4a
+DATAS,datas,txt,
+DÚVIDA,duvida,txt,m4a
+EU ESPERO QUE AS COISAS ACONTEÇAM,euespero,txt,
+FLORES MURCHAS,floresmurchas,txt,m4a
+NOSTALGIA,nostalgia,txt,
+OBVIEDADE,obviedade,txt,
+POR QUE EXIGEM TANTO DE MIM?,exigem,txt,m4a
+PROCURA,procura,txt,
+ROSAS MURCHAS,rosasmurchas,txt,
+VIA,via,txt,m4a
+SIMPLES,simples,txt,m4a
